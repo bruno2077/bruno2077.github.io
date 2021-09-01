@@ -1,0 +1,14 @@
+body {
+    margin: 0px;    
+}
+
+.app {    
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: #000;
+    background-image: url("assets/scp633.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
