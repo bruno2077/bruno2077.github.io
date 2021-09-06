@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>    
+    <meta name='viewport' content='width=device-width, initial-scale=1'>    
+    <meta name='description' content="Página somente HTML">
+    <meta name='author' content='Bruno Borges Gontijo'>
+    <meta name='keywords' content='HTML, developer, desenvolvedor, programmer, programador, fullstack'>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    
+    <title>Site somente HTML agora com CSS :)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            display: grid;
+            grid-template-areas: 
+                "headr"
+                "footr"
+                "wordpad1"
+                "wordpad2"
+                "wordpad3"
+                "winbar";
+            justify-items: center;                                    
+            background-color: #018281;
+            margin: 0px;
+            font-family: 'Montserrat';
+        }
+        body > hr:first-of-type, header > hr, main > hr, body > span { /* Todas hr menos a última + o span do CSS. */
+            display: none;
+        }
+        body > footer { grid-area: footr; }
+        body > header { grid-area: headr; }
+        body > main { grid-area: wordpad1; }
+        body > p { grid-area: wordpad2; }
+        body > section { grid-area: wordpad3; }
+        body > hr:last-of-type { grid-area: winbar; }
+
+        /* Avião */
+        footer {            
+            font-family: sans-serif;
+            min-height: 30px;            
+            height: fit-content;
+            width: 90%;
+            margin: 10px 0px 30px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            color: #000;
+
+            background-color: #C0C0C0;            
+            border-top: 1px solid #FFF;
+            border-right: 1px solid #7E7E7E;
+            border-bottom: 1px solid #7E7E7E;
+            border-left: 1px solid #FFF;
+
+            background-image: url('./assets/airplane.png');
+            background-repeat: no-repeat;
+            background-position: 3px center;
+        }
+        footer p {
+            margin: 0px;
+        }        
+
+        /* Logo e o Clippy */
+        header {
+            width: 90%;
+            height: 150px;
+            padding: 15px 0px 230px 20px;
+            margin: 0px;
+            text-align: center;            
+            background-image: url('./assets/clippy.gif');
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        /* Speech bubble */
+        header img {            
+            border: 1px solid #FDFFBF;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #FDFFBF;
+        }
+        /* Seta do Clippy */
+        header:after {            
+            z-index: 100;
+            content: "";
+            position: absolute;
+            top: 135px;
+            left: 50%;
+            border-top: 20px solid #FDFFBF;
+            
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent; 
+        }
+        
+
+        /* Cor de fundo e largura da janela do wordpad todo, pega todo o wordpad. */
+        main, body > p, section {                        
+            background-color: #FFF;
+            width: 80%;
+            padding: 10px 5%;
+            margin: 0px;
+        }
+        /* Header do Wordpad. */
+        main {            
+            /* São 4 imgs pra montar o header do wordpad e outras 2 pra fazer as bordas laterais. */
+            background-image: url('./assets/wordpad/wp-header-btns-disabled.png'), url('./assets/wordpad/wp-header-right-sm2xxl.png'), url('./assets/wordpad/wp-header-disabled-left-sm2xxl.png'), url('./assets/wordpad/wp-header-middle.png'), 
+                url('./assets/wordpad/wp-borders-left-right.png'), url('./assets/wordpad/wp-borders-left-right.png'); 
+            background-position: right top, right top, left top, center top, right top, left top;
+            background-repeat: no-repeat, no-repeat, no-repeat, repeat-x, repeat-y, repeat-y;
+            padding-top: 103px;           
+        }
+        /* Continuação das bordas laterais do wordpad pós <main> */
+        body > p {            
+            background-image: url('./assets/wordpad/wp-borders-left-right.png'), url('./assets/wordpad/wp-borders-left-right.png'); 
+            background-position: right top, left top;
+            background-repeat: repeat-y, repeat-y;
+            margin: 0px; /* pra não quebrar o background-color do wordpad */
+        }
+        /* Bordas laterais e o footer do wordpad */
+        section {            
+            /* 3 bordas pro footer, 2 bordas laterais. Tá pronto o wordpad */
+            background-image: url('./assets/wordpad/wp-borders-leftbot.png'), url('./assets/wordpad/wp-borders-rightbot.png'), url('./assets/wordpad/wp-borders-centerbot.png'), 
+                url('./assets/wordpad/wp-borders-left-right.png'), url('./assets/wordpad/wp-borders-left-right.png'); 
+            background-position: bottom left, bottom right, bottom center, right top, left top;
+            background-repeat: no-repeat, no-repeat, repeat-x, repeat-y, repeat-y;            
+        }        
+
+
+        h1, h2 {
+            /* font-family: monospace; */
+            /* color: #2b1165; */
+            border-bottom: #877e5b 1px solid;
+            
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }        
+        details:hover {
+            background: rgb(255, 255, 200);
+        }
+        abbr:hover {
+            font-weight: 700;
+            color: blue;
+        }
+        kbd {
+            padding: 1px;
+            border: 1px solid #000;
+            border-radius: 2px;
+        }
+        code {            
+            color: rgba(0, 0, 255, 0.618);
+            font-weight: 700;
+        }
+        main > code, details > code {
+            padding: 0px 6% 0px 6%;
+        }      
+        section ul {
+            list-style-type:square;
+        }
+        
+        footer > p {
+            margin-left: 60px ;
+        }
+
+        /* Barra de tarefas */
+        body > hr:last-of-type {
+            width: 100%;
+            height: 30px;
+            margin: 50px 0px 0px 0px;
+
+            background-color: #C0C0C0;
+            border-top: 1px solid #FFF;
+            border-right: 1px solid #7E7E7E;
+            border-bottom: 1px solid #7E7E7E;
+            border-left: 1px solid #FFF;
+
+            background-image: url('./assets/w95-bar2.png'), url('./assets/w95-bar1.png');
+            background-position: 228px center, 3px center;
+            background-repeat: no-repeat, no-repeat;
+        }        
+
+        @media (max-width: 500px) {
+            footer p {
+                text-align: center;
+            }
+            main, body > p, section {
+                width: 100%;
+            }
+        }
+        @media (max-width: 400px) {
+            body > hr:last-of-type { /* barra de tarefas */
+                background-position: 61px center, 3px center;
+                
+            }
+            main, body > p, section > h2 { /* Todo o texto no wordpad menos os links das referencias */
+                font-size: 0.9rem;
+            }
+            section ul { /* links das referencias */
+                font-size: 0.85rem;       
+                padding-left: 10px;                
+            }            
+        }
+
+    </style>
+</head>
+<body>
+    <header id="top">        
+        <picture>
+            <source media="(min-width:410px)" srcset="./logo.png">            
+            <img src="./logo2.png" alt="logotipo do site escrito: HTML" usemap="#html5">
+          </picture>
+        <map name="html5">
+            <area shape="rect" coords="1,1,90,100" alt="Site do HTML5" href="https://www.w3.org/TR/html52/">            
+            <area shape="rect" coords="112,1,345,102" alt="Site do HTML4" href="https://www.w3.org/TR/html401/">            
+        </map>
+        <hr>
+    </header>
+    <main>
+        <h1>Página somente HTML</h1>
+
+        <p>Este é um exemplo de página usando só <abbr title="HyperText Markup Language">HTML</abbr>, ou melhor, <strong>somente HTML dentro dos padrões.</strong> Confesso que
+            foi uma surpresa mas provavelmente não resta mais nenhum estilo no HTML como mudar uma cor, uma fonte ou dar um espaçamento ou alinhamento, ou a tag está 
+            descontinuada, ou seu uso é desaconselhado pelo <abbr title="World Wide Web Consortium">W3C</abbr>, ou simplesmente é usada fora de seu contexto pra fazer gambiarra. 
+            Hoje, falou em estilo recomenda-se só <abbr title="Cascading Style Sheets">CSS</abbr>.
+        </p>
+        <p>Se isso é ruim? claro que não! ao contrário, as funções de ambas as tecnologias estão mais bem definidas do que nunca, além do mais <strong>foi uma aula de HTML construir 
+            essa página.</strong> Portanto a ideia aqui não foi construir uma página bonita e cheia de estilo simulando CSS com HTML a todo custo, o objetivo foi construir uma 
+            página explorando bem os recursos semânticos do HTML, usando tags com a finalidade que foram criadas (algo que parece trivial mas não é) e em um local que 
+            faça sentido o seu uso.
+        </p>
+
+        <h2>HyperText Markup Language</h2>
+        <p> Criado em 1991, inicialmente o HTML foi projetado pra interligar instituições de pesquisa divulgando e compartilhando documentos com facilidade. E é disso que 
+            se trata uma página somente com HTML, transmitir uma mensagem de maneira eficiente, direta, acessível e, por que não, responsiva. 
+            <ul>
+                <li><b>Eficiente</b>: O site é leve e carrega rápido. Já contando com as imagens esse site tem só 43KB, leva cerca de 1 segundo pra carregar numa internet ADSL do 
+                    arco da velha como o "turbo 300" (300Kbps) da finada Brasil Telecom.</li>
+                <li><b>Direta</b>: O site é praticamente texto, é preto no branco, sem distrações, popups saltando na frente do texto, overflows, loadings ou clickbaits. É como 
+                    ler um documento impresso mesmo.</li>
+                <li><b>Acessível</b>: O site funciona em todos os navegadores que suportam HTML5 e não exige uma internet rápida. Tem a mesma aparência em todos os navegadores.</li>
+                <li><b>Responsiva</b>: Experimente redimencionar a janela do browser, a página cabe em todas as telas, da TV de <del>88 polegadas</del> 
+                    <ins><a href="https://www.samsung.com/br/the-wall/">292 polegadas</a></ins> ao <a href="https://www.unihertz.com/products/jelly-pro">smartphone de 2.45 
+                    polegadas</a>.</li>
+            </ul>
+        </p>
+        <p>Naturalmente a página não tem a beleza e as funcionalidades das de streaming de vídeos por exemplo mas veja que pra fazer um site funcional, simples e direto só HTML 
+            já dá conta do recado. Na medida que se aprende mais sobre HTML é normal se deparar com um assunto: a importância de se utilizar a semântica HTML. 
+            De acordo com o W3C: <q>Uma Web semântica permite que os dados sejam compartilhados e reutilizados em aplicativos, empresas e comunidades.</q> Esse assunto 
+            significa utilizar corretamente os elementos HTML, cada qual com seu propósito, o máximo que for possível. Muito além de <i>div</i> e <i>span</i> o uso adequado das 
+            marcações facilita o desenvolvimento e manutenção do site, melhora a adaptação ao responsivo e contribui para <abbr title="Search Engine Optimization">SEO</abbr> 
+            (otimização para mecanismos de busca). Além, é claro, de tornar a página mais acessível, pois elementos semânticos trazem informações adicionais a leitores de tela 
+            para deficientes visuais e outras ferramentas, facilitando a navegação no site.
+        </p>
+
+        <H2>Acessibilidade</H2>
+        <p>Podemos nos perguntar porque HTML semântico é tão importante. Afinal, é possível usar uma combinação de CSS e JavaScript pra fazer com que qualquer elemento HTML se 
+            comporte da forma que quisermos. Por exemplo, um botão para dar play em um vídeo de um site pode ser criado dessa forma:
+        </p>
+
+        <code> &lt;div&gt; Play vídeo &lt;/div&gt;</code>
+
+        <p>Porém faz muito mais sentido utilizar o elemento correto para essa finalidade:</p>
+
+        <code> &lt;button&gt; Play vídeo &lt;/button&gt; </code>
+
+        <p>Veja bem, o elemento <i>button</i> já é embutido com padrões de acessibilidade pelo teclado — botões podem ser navegados através da tecla <kbd>tab</kbd>
+            do teclado, e ativados utilizando a tecla <kbd>Enter</kbd> / <kbd>Return</kbd>. Além disso como já foi dito o código também fica mais legível pra seres humanos e 
+            escrever códigos que fiquem legíveis para outros programadores é mandatório quando se trabalha em equipe. A seguir alguns exemplos simples de semântica boa x ruim, 
+            a renderização de ambos os códigos são muito parecidos ou até idênticos mas pra quem for ler o código, seja algoritmo ou humano, isso faz diferença.
+        </p>
+        
+        <p><strong>Exemplos</strong><br/>Clique nos itens para saber mais:</p>
+        
+        <details>
+            <summary>Devemos fazer títulos com as tags próprias para isso, ou seja, as tags de cabeçalho <i>h1</i> a <i>h6</i> e não fazê-los com tags como <i>span</i> 
+            ou <i>p</i> com <code>font-size</code> aumentado.</summary>
+            <p> Semântica boa:</p>
+            <code> &lt;h1&gt; Meu título &lt;/h1&gt; </code>
+            <p> Semântica ruim:</p>
+            <code> &lt;p style="font-size:2em; font-weight:900;"&gt; Meu título &lt;/p&gt; </code>
+        </details>        
+        <br/>        
+        <details>
+            <summary>Devemos colocar parágrafos com a tag <i>p</i> e não ficar colocando texto diretamente, sem tags e pulando as linhas com <i>br</i> duplo.</summary>
+            <p> Semântica boa:</p>
+            <code> 
+                &lt;p&gt;Esse é o primeiro parágrafo do meu documento.&lt;/p&gt;
+                &lt;p&gt;Esse é o segundo parágrafo do meu documento.&lt;/p&gt;
+            </code>
+            <p> Semântica ruim:</p>
+            <code> 
+                Esse é o primeiro parágrafo do meu documento. &lt;br&gt;&lt;br&gt; Esse é o segundo parágrafo do meu documento. &lt;br&gt;&lt;br&gt;
+            </code>
+        </details>
+        <br/>        
+        <details>
+            <summary>Devemos criar listas ordenadas com a tag <i>ol</i> e listas não ordenadas com <i>ul</i> e não criar listas “na unha” digitando a numeração manualmente.</summary>
+            <p> Semântica boa:</p>
+            <code> &lt;ol&gt;&lt;li&gt;primeiro item&lt;/li&gt; &lt;li&gt;segundo item&lt;/li&gt; &lt;li&gt;terceiro item da lista ordenada&lt;/li&gt;&lt;/ol&gt; </code>
+            <p> Semântica ruim:</p>
+            <code>1. primeiro item &lt;br&gt; 2. segundo item &lt;br&gt; 3. terceiro item da lista ordenada &lt;br&gt;&lt;br&gt; </code>
+        </details>        
+        
+        <h2>SEO - Otimização para motores de busca</h2>
+
+        <p>O sonho de todo negócio no ambiente online é ter o site em primeiro lugar nos sites de busca. Essa é uma conquista muito importante, mas que não acontece da noite 
+            para o dia. Só para deixar claro, <strong>há mais de 200 fatores de ranqueamento para definir a posição dos links nos resultados do Google</strong>, o motor de  
+            busca mais utilizado do mundo. Os fatores vão desde otimizações dentro da página (como o HTML com boa semântica) até assuntos mais técnicos, como velocidade do 
+            site e segurança. <dfn>SEO</dfn> é um conjunto de técnicas que têm como objetivo posicionar uma ou mais páginas web entre os melhores resultados dos motores de 
+            pesquisa.
+        </p>        
+        <p>No que se refere a HTML podemos citar mais uma vez o uso correto das tags de cabeçalho, o uso de texto alternativo na tag de imagem e o uso de alguns tipos de 
+            metadados com a tag <i>meta</i>.
+        </p>
+        <p>No caso das tags de cabeçalho, pode-se entender que existe uma escala de 1 a 6 (<i>h1</i> a <i>h6</i>), onde a <i>h1</i> predomina sobre as demais por representar 
+            o título principal, afinal, todo texto tem ao menos 1 título. As demais tags são utilizadas de acordo com os subtítulos inseridos, sendo assim, a <i>h1</i> deve ser 
+            vista como a mais importante e a <i>h6</i> a menos importante. Portanto, tanto do ponto de vista SEO quanto de qualquer outro, desrespeitar essa hierarquia 
+            utilizando-se, por exemplo, de um título em <i>h3</i> e um subtítulo em <i>h1</i>, a estrutura ficaria no mínimo estranha e confusa, comprometendo o rankeamento 
+            do site nos resultados dos buscadores e, sobretudo, o entendimento de seus leitores em relação ao texto.
+        </p>
+        <p>Os buscadores ainda não consegue interpretar o conteúdo de uma imagem a busca por elas só é possível através da parte escrita do elemento de imagem, é a parte 
+            escrita que exerce a função de fornecer uma descrição sobre as imagens de modo que os algoritmos dos buscadores consigam reconhecê-las. Isso é feito principalmente
+            através do atributo <i>alt</i> da tag <i>img</i>. Por exemplo, se temos uma imagem nomeada como <i>DSC281142.png</i>, ao invés de deixar o atributo <i>alt</i> 
+            vazio podemos colocá-lo como <i>“urso pardo caçando peixes”</i>, isso permite que a imagem seja encontrada na pesquisa de imagens.
+        </p>
+        <p>As tags <i>meta</i> são elementos HTML onde podemos descrever o conteúdo da página para os mecanismos de busca. Podemos fornecer informações como uma breve descrição 
+            acerca do conteúdo da página, palavras-chave, autor da página, formato de codificação dos caracteres utilizados no documento, etc.
+        </p>
+    </main>
+    <p><a href="#top">Voltar ao topo</a></p>
+    <hr>
+    <section>
+        <H2>Referências</H2>
+        <ul>
+            <li><a href="https://www.hostinger.com.br/tutoriais/dicas-basicas-de-seo">https://www.hostinger.com.br/<wbr>tutoriais<wbr>/dicas-basicas-de-seo</a></li>
+            <li><a href="https://medium.com/reprogramabr/como-escrever-html-com-acessibilidade-eb5fb1a6af5a">https://medium.com/<wbr>reprogramabr/<wbr>como-escrever-html-com-acessibilidade-eb5fb1a6af5a</a></li>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Accessibility/HTML">https://developer.mozilla.org<wbr>/pt-BR<wbr>/docs<wbr>/Learn<wbr>/Accessibility<wbr>/HTML</a></li>
+            <li><a href="http://motherfuckingwebsite.com/">http://motherfucking<wbr>website.com/</a></li>
+            <li><a href="https://rockcontent.com/br/blog/o-que-sao-heading-tags/">https://rockcontent.com<wbr>/br<wbr>/blog<wbr>/o-que-sao-heading-tags/</a></li>
+            <li><a href="https://stackoverflow.com/questions/11386586/how-to-show-div-tag-literally-in-code-pre-tag">https://stackoverflow.com<wbr>/questions<wbr>/11386586<wbr>/how-to-show-div-tag-literally-in-code-pre-tag</a></li>
+            <li><a href="https://www.w3schools.com/tags/default.asp">https://www.w3schools.com<wbr>/tags<wbr>/default.asp</a></li>
+        </ul>
+    </section>
+    <hr>
+    <span><a href="./css.html">Confira a versão dessa <strong>mesma</strong> página com CSS</a></span>
+    <footer>
+        <p ><small><del>©</del> Copylight 2077 by Bruno Borges Gontijo. All rights reversed.</small></p>
+    </footer>
+</body>
+</html>
