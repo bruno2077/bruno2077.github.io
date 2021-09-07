@@ -4,11 +4,21 @@ body {
 
 .app {    
     height: 100vh;
-    width: 100vw;
-    text-align: center;
+    width: 100vw;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #000;
     background-image: url("assets/scp633.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+
+.app p {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000;
+    color: #CCC;
+    font: 1.5rem;
+    padding: 5px;    
 }
