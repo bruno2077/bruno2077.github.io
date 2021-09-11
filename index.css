@@ -15,7 +15,6 @@ body {
         "top"
         "content"
         "bot";    
-    min-height: 100vh;
 }
 header { grid-area: top; }
 main { grid-area: content; }
