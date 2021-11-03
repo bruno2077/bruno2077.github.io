@@ -2,9 +2,12 @@
 * {
     box-sizing: border-box;
 }
+html {
+    font-size: 16px !important; /* bootstrap altera muito a font-size padrão */
+}
 body {
     margin: 0px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif  !important;
 }
 
 #app {    
@@ -113,16 +116,24 @@ header {
     align-items: center;
     padding: 0px 5% 30px 5%;        
 }
-.portfolio h2 {   
-    font-size: 1.5rem;
+.port-title{   
+    font-size: 1rem;
+    font-weight: 700;
     text-align: center;
     margin: 30px 0px 0px 0px;
+    color: #861bbc;
+}
+.port-category {
+    margin-bottom: 1em;
 }
 .port-category h3 {
     color: #861bbc;
     display: inline-block;
     width: 300px;
     border-bottom: 1px solid #861bbc;
+    font-size: 19px;
+    font-weight: 800;
+    margin: 1em 0px;
 }
 .card-item {
     display: flex;
@@ -143,15 +154,23 @@ header {
     background: linear-gradient(to top, #2E0C47  0%, #492276 50%, #2E0C47 100%);
     display: inline-block;    
     color: #fff;
+    font-size: 16px;
+    font-weight: 800;
 }
 .item-mini img {
     width: 300px;
+}
+.item-mini img:hover {
+    cursor: pointer;
 }
 .item-description {    
     padding: 0px 0px 0px 20px;
 }
 .item-description p:first-of-type {    
-    margin: 0px;
+    margin: 0px;    
+}
+.item-description p {
+    margin-top: 1em;
 }
 .item-description a {
     color: #9100FF;
