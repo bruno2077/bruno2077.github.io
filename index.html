@@ -22,6 +22,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./index.js" defer></script>
         
     
     <title>Portfolio de Bruno Borges Gontijo</title>
@@ -47,36 +48,41 @@
         </header>
         <main class="portfolio">
             <h2 class="port-title">Portfolio</h2>
-            <p class="mb-2 fw-bold h4">Confira alguns projetos realizados</p>
+            <p class="mb-2 fw-bold h4">Confira alguns projetos desenvolvidos</p>
             
             <div class="port-category">
-                <h3>HTML</h3>
+                <h3>Página Somente HTML</h3>
                 <div class="card-area">
                     <div class="card-item">
-                        <div class="item-mini">
-                            <h4>Página Somente HTML</h4>
+                        <div class="item-mini">                            
                             <a target="_blank" href="https://bruno2077.github.io/html-only"><img src="./assets/FirstPages.png" alt="Página Somente HTML"></a>
                         </div>
                         <div class="item-description">                           
-                            <p>Essa página foi feita só com HTML, e de maneira bem estruturada sem gambiarras de estilo ou terrores de semântica. Na verdade o código é mais interessante que a página em si :/</p>
-                            <p>Não estava planejado mas fiz um CSS pra essa página sem mexer em nem uma tag, foi um bom desafio. Confira a 
-                                <a target="_blank" href="https://bruno2077.github.io/html-only/css.html">versão com css</a> e o repositório no <a target="_blank" href="https://github.com/bruno2077/bruno2077.github.io/tree/main/html-only">GitHub</a>.</p>
+                            <p>Essa página foi feita <a target="_blank" href="https://bruno2077.github.io/html-only">só com HTML</a>, o objetivo foi utilizar a maior variedade 
+                                possível das tags HTML e com a finalidade para a qual foram criadas, de manera bem estruturada, sem gambiarras de estilo ou terrores de 
+                                semântica. Na verdade o código chega a ser mais interessante que a página em si. <i class="far fa-grin-beam-sweat "></i></p>
+                            <p>Não estava planejado mas pra deixar então a página mais interessante que o código (e como um ótimo desafio) fiz um estilo CSS pra ela sem mexer 
+                                em nem uma tag. O estilo foi inspirado no <a href="https://pt.wikipedia.org/wiki/Windows_95" target="_blank">Windows 95</a>. 
+                                Confira então a <a target="_blank" href="https://bruno2077.github.io/html-only/css.html">versão com CSS</a> e o 
+                                repositório no <a target="_blank" href="https://github.com/bruno2077/bruno2077.github.io/tree/main/html-only">GitHub</a>.</p>
                         </div>
                     </div>                    
                 </div>
             </div>
             <div class="port-category">
-                <h3>HTML CSS Javascript React</h3>
+                <h3>Weblogz</h3>
                 <div class="card-area">
                     <div class="card-item">
-                        <div class="item-mini">
-                            <h4>Weblogz</h4>
+                        <div class="item-mini">                            
                             <img src="./assets/wl.png" alt="Projeto Weblogz no GitHub" data-bs-toggle="modal" data-bs-target="#weblogzModal">
                         </div>
                         <div class="item-description">                                 
                             <p>Este é um blog multi autor completo com cadastro de usuários, artigos e categorias de artigos. Possui controles de acesso, rotas e autenticação.
                                 O back-end foi desenvolvido no Node utilizando o framework Express pra criar o servidor, JWT pra fazer a parte de autenticação e o Postgresql 
                                 como banco de dados SQL. O front-end foi desenvolvido com o framework React.js.</p>
+                            <p>Este foi um puta primeiro projeto de javascript/React.js, englobou tanto conhecimento front-end quanto back-end. Foram meses mas o projeto foi até 
+                                o fim. Foram muitos conhecimentos adquiridos, o projeto abrangeu banco de dados, segurança, autenticação, controle de acesso, componentização, e o mais importante 
+                                a vivência de um projeto relativamente grande do início ao fim.</p>
                             <p>O projeto está hospedado no GitHub, lá você encontra a descrição completa, como instalar, executar e usar todas as 
                                 funcionalidades. <a target="_blank" href="https://github.com/bruno2077/weblogz">Confira</a>.</p>
                         </div>
@@ -133,7 +139,7 @@
             </div>
         </main>
         <footer>
-            <small>Desenvolvido com <i class="far fa-hand-peace"></i> por Bruno Borges Gontijo</small>
+            <small>Desenvolvido com <i id="iconsCarrousel" class="fas fa-heartbeat px-1"></i> por Bruno Borges Gontijo</small>
         </footer>
     </div>
 </body>
