@@ -43,14 +43,14 @@ header {
     height: 60px;
     margin: 0px 5%;
 }
-.hbar h1, .contact, .nav-btn {    
+.hbar .logo, .contact, .nav-btn {    
     margin: 0;
     padding: 0;
     display: inline;    
 }
-.hbar h1 {        
+.hbar .logo {        
     font-size: 1.3rem;   
-    font-family: 'Orbitron', sans-serif;    
+    font-family: 'Orbitron', sans-serif;
 }
 .contact  { /* ul */
     height: 100%;
