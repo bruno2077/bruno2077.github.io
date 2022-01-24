@@ -5,9 +5,9 @@ const fontIcons = ["fas fa-heartbeat", 'fas fa-music', "far fa-thumbs-up", 'fab 
                     'fas fa-heart-broken', "far fa-hand-peace", 'fas fa-fire-alt', "far fa-grin", "fab fa-js-square" ]
 let index = 0
 setInterval(function(){            
-    element.className = fontIcons[index] + " px-1"
+    element.className = fontIcons[index] + " text-center"
     ++index
     if(fontIcons.length <= index)
         index = 0     
 
-    }, 1000)
+    }, 1500)
