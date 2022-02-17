@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./index.js" defer></script>
+    <title>Vault-Tec</title>
+</head>
+<body class="light" id="topo">     
+    <!-- Barra de navegação  -->
+    <nav class="navbar">
+        <a href="#topo">
+            <img class="navbarLogo" src="./assets/imgs/logo.png" alt="Vault-tec logo">
+        </a>        
+
+        <div class="navbarBarsIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <ul class="navbarMenu" >
+            <li>
+                <a href="#topo" class="navbarLinks">Home</a>
+            </li>
+            <li>
+                <a href="#vaults" class="navbarLinks">Vaults</a>
+            </li>
+            <li>
+                <a href="#galeria" class="navbarLinks">Galeria</a>
+            </li>
+            <li>
+                <button class="btn"><a href="#inscreva">Inscreva-se</a></button>                
+            </li>
+            <li>
+                <div class="toggle">
+                    <input type="checkbox" id="toggleTheme"/>
+                    <label for="toggleTheme"></label>
+                </div>   
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="heroContainer">
+            <div class="heroContainerLeft">
+                <h1>Ataque nuclear?</h1>
+                <h2>Proteja sua família agora!</h2>
+                <p>Com um abrigo nuclear (Vault) da Vault-tec corporation</p>
+                <button class="btn">
+                    <a href="#inscreva">Inscreva-se</a>
+                </button>
+            </div>
+
+            <div class="heroContainerRight">
+                <img src="./assets/imgs/vaultboy.png" alt="Vault Boy fazendo joinha" class="heroContainerImg">
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Vaults -->
+    <div class="vaults" id="vaults">
+        <h3>Prepare-se para o futuro</h3>
+        <img src="./assets/imgs/bg1.png" alt="Fila de pessoas entrando em um Vault">
+        <div class="vaultInfos">            
+            <div class="info">
+                <div class="infoIcon icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div>
+                    <h4>Capacidade de até 1000 pessoas</h4>
+                    <div>
+                        <p>
+                            Espere pelo término do apocalipse com sua família e amigos em uma comunidade Vault-tec.
+                        </p>
+                        <p>
+                            Vaults protegerão você e seus entes queridos por até 900 anos, se necessário.
+                        </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="info">
+                <div class="infoIcon icon">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div>
+                    <h4>Paredes de concreto com 1,5m de espessura</h4>
+                    <div>
+                        <p>
+                            Incluindo papel de parede decorativo, quartos temáticos, e sistema de ventilação de ar fresco e limpo.
+                        </p>
+                        <p>
+                            Aqueles com talentos nas artes, como música, podem ser admitidos em vaults especiais mediante aprovação do seu pedido.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galeria -->
+    <div class="gallery" id="galeria">
+        <h3>Galeria</h3>
+        <h4>Onde você estará quando as bombas atômicas caírem?</h4>
+        <div class="images">
+            <div class="imgCol">
+                <img src="./assets/imgs/interior1.jpg" alt="">
+                <img src="./assets/imgs/interior1-2.jpg" alt="">
+            </div>
+            <div class="imgCol">
+                <img src="./assets/imgs/interior2.jpg" alt="">
+                <img src="./assets/imgs/interior2-2.jpg" alt="">
+            </div>
+            <div class="imgCol">
+                <img src="./assets/imgs/interior3.jpg" alt="">
+                <img src="./assets/imgs/interior3-2.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Formulário -->
+    <div class="signUp" id="inscreva">        
+        <h3>Inscreva-se agora!</h3>
+        <h4>Reserve um lugar pra você e sua família em um Vault hoje mesmo.</h4>
+        <div class="form">
+            <div class="formItem">
+                <label for="name">Nome</label>
+                <div class="inputGroup">                    
+                    <i class="far fa-user inputIcon"></i>
+                    <input type="text" class="name" id="name">
+                </div>
+            </div>
+
+            <div class="formItem">
+                <label for="cpf">CPF</label>
+                <div class="inputGroup"> 
+                    <i class="far fa-address-card"></i>
+                    <input type="number" class="number" id="cpf">
+                </div>
+            </div>
+
+            <div class="formItem">
+                <label for="email">E-mail</label>
+                <div class="inputGroup"> 
+                    <i class="fas fa-at"></i>
+                    <input type="text" class="email" id="email">
+                </div>
+            </div>
+
+            <div class="formItem">
+                <label for="cep">CEP</label>
+                <div class="inputGroup"> 
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="number" class="number" id="cep">  
+                </div>                
+            </div>
+            
+            <div class="formItem">
+                <label for="family">Família</label>
+                <div class="inputGroup"> 
+                    <i class="fas fa-home"></i>
+                    <select id="family">
+                        <option value="1">1 pessoa</option>
+                        <option value="2">2 pessoas</option>
+                        <option value="3">3 pessoas</option>
+                        <option value="4">4 pessoas</option>
+                        <option value="5">5 pessoas</option>
+                        <option value="6">6 pessoas</option>
+                        <option value="7">7 pessoas</option>
+                        <option value="8">8 pessoas</option>
+                        <option value="0">9 pessoas ou mais</option>
+                    </select>                    
+                </div>
+                <div></div><span>Animais de estimação e robôs não são permitidos.</span>
+            </div>
+            <button class="btn"><a>Enviar</a></button>
+        </div>
+        <p>Dúvidas? Para maiores informações ligue: 0800-4-VAULTTEC</p>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footerTop">
+            
+            <div class="footerSide">
+                <p class="footerTitle">Web site baseado no universo de Fallout</p>
+                <div class=footerLeft>                
+                    <div class="footerIcon">
+                        <img class="svgIcon" src="./assets/imgs/fallout-logo.svg">
+                        <a href="https://fallout.bethesda.net/">Site Oficial</a>
+                    </div>
+                    <div class="footerIcon">
+                        <i class="fab fa-wikipedia-w icon"></i>
+                        <a href="https://pt.wikipedia.org/wiki/Fallout_(s%C3%A9rie)">Wiki</a>
+                    </div>                
+                </div>
+            </div> 
+
+            <div class="footerSide">
+                <p class="footerTitle">Sobre</p>
+                <div class=footerRight>
+                    <div class="footerIcon">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/bruno2077/vault-tec">Github</a>
+                    </div>
+                    <div class="footerIcon">
+                        <i class="fab fa-figma"></i>
+                        <a href="">Figma</a>
+                    </div>
+                    <div class="footerIcon author">
+                        <i class="fas fa-user-astronaut"></i>
+                        <a href="https://bruno2077.github.io/">Bruno2077</a>
+                    </div>
+                </div>
+            </div> 
+
+        </div> 
+        <div class="footerBot">© 2022</div>
+    </footer>
+</body>
+</html>
